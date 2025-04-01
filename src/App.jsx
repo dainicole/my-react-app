@@ -1,8 +1,12 @@
-function Square({ value }) {
-  function handleClick() {
-    console.log('clicked!');
-  }
+import { useState } from 'react';
 
+function Square() {
+  const [value, setValue] = useState(null);
+
+  function handleClick() {
+    setValue('X');
+  }
+ 
   return (
     <button
       className="square"
